@@ -1,10 +1,11 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../services/Firebase Authentication/Authentication';
 import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const { user, LogOut } = useContext(AuthContext)
+
     const HandleLogout = () => {
         LogOut()
             .then(() => {
@@ -40,13 +41,20 @@ const Navbar = () => {
                     <li>
                         <NavLink to={'/updateProfile'} className={({ isActive }) => isActive ? "text-orange-500" : ""}>Update Profile</NavLink>
                     </li>
+                    <li>
+                        <NavLink to={'/register'} className={({ isActive }) => isActive ? "text-orange-500" : ""}>Register</NavLink>
+                    </li>
                 </ul>
             </div>
-            <div className="navbar-end gap-2">
+            <div className="navbar-end">
                 {user ?
-                    <div className='flex items-center gap-10'>
-                        <p>{user.displayName}</p>
-                        <button className='btn text-white bg-red-600' onClick={HandleLogout}>Logout</button>
+                    <div className='flex items-center gap-2'>
+                        <div className="avatar tooltip tooltip-bottom" data-tip={user.displayName}>
+                            <div className="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-[0.5px]">
+                                <img src={user.photoURL} alt='User Profiile' />
+                            </div>
+                        </div>
+                        <button className={`btn text-white bg-red-600`} onClick={HandleLogout}>Logout</button>
                     </div>
                     :
                     <Link to={'/login'} className="btn text-white bg-green-600">Log In</Link>}

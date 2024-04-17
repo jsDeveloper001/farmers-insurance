@@ -6,9 +6,11 @@ import { Toaster } from 'react-hot-toast';
 const Root = () => {
     return (
         <div>
-            <Navbar/>
-            <Toaster/>
-            <Outlet />
+            <Navbar />
+            <div className='container mx-auto'>
+                <Toaster />
+                <Outlet />
+            </div>
         </div>
     );
 };

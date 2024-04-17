@@ -6,12 +6,26 @@ import toast from 'react-hot-toast';
 
 
 const Login = () => {
-    const { GooglSignIn, GithubSignIn, user } = useContext(AuthContext)
+    const { GooglSignIn, GithubSignIn, user, SignInEmailPassword } = useContext(AuthContext)
+
+    // Authenticate by Email and Password
     const HandleSubmit = (e) => {
         e.preventDefault()
         const Email = e.target.email.value;
         const Password = e.target.password.value;
-        console.log(Email, Password)
+        if (!user) {
+            SignInEmailPassword(Email, Password)
+                .then(() => {
+                    toast.success("Successfully logged in")
+                })
+                .catch(error => {
+                    console.log(error)
+                    toast.error("Invalid Email/Password")
+                })
+        }
+        else {
+            toast.error("Already Logged In")
+        }
     }
 
     // Authenticate by Google Account
@@ -20,6 +34,10 @@ const Login = () => {
             GooglSignIn()
                 .then(() => {
                     toast.success("Successfully logged in with Google")
+                })
+                .catch((error) => {
+                    console.log(error)
+                    toast.error("An error occurred")
                 })
         }
         else {
@@ -36,6 +54,7 @@ const Login = () => {
                 })
                 .catch(error => {
                     console.log(error)
+                    toast.error("An error occurred")
                 })
         }
         else {
