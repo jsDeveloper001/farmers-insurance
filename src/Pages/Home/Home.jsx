@@ -1,10 +1,13 @@
 import React from 'react';
 import '../../styles/Global.css'
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div>
-            <h2>Home</h2>
+            <Helmet>
+                <title>Farmers Insurance</title>
+            </Helmet>
         </div>
     );
 };

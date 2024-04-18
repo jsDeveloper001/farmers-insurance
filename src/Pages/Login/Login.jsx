@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../services/Firebase Authentication/Authentication';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet-async';
 
 
 const Login = () => {
@@ -68,6 +69,9 @@ const Login = () => {
 
     return (
         <div className='flex justify-center mt-10 h-auto'>
+            <Helmet>
+                <title>Farmers Insurance | Login</title>
+            </Helmet>
             <div className='bg-yellow-50 p-7 rounded-md'>
                 <h2 className='text-4xl text-center font-bold'>Sign In</h2>
                 <div>

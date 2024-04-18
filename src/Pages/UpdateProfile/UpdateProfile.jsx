@@ -3,6 +3,7 @@ import { AuthContext } from '../../services/Firebase Authentication/Authenticati
 import toast from 'react-hot-toast';
 import { updateProfile } from 'firebase/auth';
 import auth from '../../services/Firebase/Firebase.config';
+import { Helmet } from 'react-helmet-async';
 
 const UpdateProfile = () => {
     const { user, setUpdateUser, updateUser } = useContext(AuthContext)
@@ -51,6 +52,9 @@ const UpdateProfile = () => {
     }
     return (
         <div className='flex justify-center mt-5'>
+            <Helmet>
+                <title>Farmers Insurance | Update Profile</title>
+            </Helmet>
             {user &&
                 <div className='border px-5 flex flex-col items-center'>
                     <h2 className='font-bold text-xl'>Hello, <span className='text-blue-600'>{user.displayName}</span></h2>

@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { updateProfile } from 'firebase/auth';
 import auth from '../../services/Firebase/Firebase.config';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
     const navigate = useNavigate()
@@ -59,6 +60,9 @@ const Register = () => {
     }
     return (
         <div className='flex justify-center mt-10 h-auto'>
+            <Helmet>
+                <title>Farmers Insurance | Sign Up</title>
+            </Helmet>
             <div className='bg-yellow-50 p-7 rounded-md'>
                 <h2 className='text-4xl text-center font-bold'>Sign Up</h2>
                 <div>
