@@ -6,6 +6,7 @@ export const AuthContext = createContext(null)
 const Authentication = ({ children }) => {
     // console.log(children)
     const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
     const [updateUser, setUpdateUser] = useState(false)
 
     const googleProvider = new GoogleAuthProvider();
@@ -31,9 +32,11 @@ const Authentication = ({ children }) => {
         const unSubscribe = onAuthStateChanged(auth, (User) => {
             if (User) {
                 setUser(User)
+                setLoading(false)
             }
             else {
                 setUser(null)
+                setLoading(false)
             }
         })
         return () => {
@@ -49,6 +52,7 @@ const Authentication = ({ children }) => {
         SignInEmailPassword,
         updateUser,
         setUpdateUser,
+        loading,
         LogOut
     }
     return (

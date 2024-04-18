@@ -56,7 +56,7 @@ const UpdateProfile = () => {
                 <title>Farmers Insurance | Update Profile</title>
             </Helmet>
             {user &&
-                <div className='border px-5 flex flex-col items-center'>
+                <div className='border px-8 rounded-md py-3 flex flex-col items-center'>
                     <h2 className='font-bold text-xl'>Hello, <span className='text-blue-600'>{user.displayName}</span></h2>
                     <div className='mt-10'>
                         <img src={user.photoURL} alt="Profile Image" className='w-24 h-24 ring rounded-full' />

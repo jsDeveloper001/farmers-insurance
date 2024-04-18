@@ -12,6 +12,7 @@ const Register = () => {
     const { SignUpEmailPassword, updateUser, setUpdateUser, user } = useContext(AuthContext)
     const [error, setError] = useState(null)
     const [showPass, setShowPass] = useState(false)
+    
     const HandleSubmit = (e) => {
         e.preventDefault()
         setError(null)
