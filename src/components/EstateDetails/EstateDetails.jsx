@@ -7,7 +7,7 @@ const EstateDetails = () => {
     const selectedEstate = Estates.find(Estate => Estate.id == id.estateId);
     const navigate = useNavigate()
     return (
-        <div className='mt-10 px-5 md:px-14 flex justify-center'>
+        <div className='mt-10 px-5 md:px-14 flex justify-center' data-aos="fade-up">
             <div>
                 <img src={selectedEstate.image} alt="Banner Image" className="rounded-lg w-full" />
                 <div className="mt-7">

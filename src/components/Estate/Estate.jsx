@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Estate = ({ estate }) => {
     return (
-        <div className="p-2 shadow-lg border rounded-xl">
+        <div className="p-2 shadow-lg border rounded-xl" data-aos="flip-down" data-aos-duration="1500">
             <div className="flex justify-center">
                 <img src={estate.image} alt="thumbnail" className="rounded-lg h-[250px] w-full" />
             </div>

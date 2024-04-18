@@ -6,7 +6,7 @@ const Estates = () => {
     const Estates = useLoaderData()
     return (
         <div className='mt-14'>
-            <div className='text-center'>
+            <div className='text-center' data-aos="fade-in" data-aos-duration="1500">
                 <h2 className='font-bold text-3xl text-gray-700'>Explore Your Estates</h2>
                 <p className='mt-2'>Delivering iconic Agricultural land, Farm land and Plantation land properties.
                     More than 100 projects are ongoing at the moment.</p>
