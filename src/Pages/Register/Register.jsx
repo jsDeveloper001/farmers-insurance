@@ -1,13 +1,16 @@
 import { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, } from 'react-router-dom';
 import { AuthContext } from '../../services/Firebase Authentication/Authentication';
 import toast from 'react-hot-toast';
 import { updateProfile } from 'firebase/auth';
 import auth from '../../services/Firebase/Firebase.config';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
+    const navigate = useNavigate()
     const { SignUpEmailPassword, updateUser, setUpdateUser, user } = useContext(AuthContext)
     const [error, setError] = useState(null)
+    const [showPass, setShowPass] = useState(false)
     const HandleSubmit = (e) => {
         e.preventDefault()
         setError(null)
@@ -38,6 +41,8 @@ const Register = () => {
                             setUpdateUser(!updateUser)
                             toast.success("Successfully Register")
                             toast.success("Successfully logged in")
+                            navigate('/')
+
                         })
                         .catch((error) => {
                             console.log(error)
@@ -61,8 +66,15 @@ const Register = () => {
                         <div className='flex flex-col gap-3'>
                             <input type="text" className='border-2 p-2 rounded-md focus:outline-blue-400 duration-100' placeholder='enter your full name' name='name' required />
                             <input type="email" className='border-2 p-2 rounded-md focus:outline-blue-400 duration-100' placeholder='enter your email' name='email' required />
-                            <input type="url" className='border-2 p-2 rounded-md focus:outline-blue-400 duration-100' placeholder='enter your image url' name='image' />
-                            <input type="password" className='border-2 p-2 rounded-md focus:outline-blue-400 duration-100' placeholder='enter your password' name='password' required />
+                            <input type="url" className='border-2 p-2 rounded-md focus:outline-blue-400 duration-100' placeholder='Enter your profile pic url' name='image' />
+                            <div className='relative'>
+                                <input type={showPass ? "text" : "password"} className='w-full border-2 p-2 rounded-md focus:outline-blue-400 duration-100' placeholder='enter your password' name='password' required />
+                                <span className='absolute right-2 top-4 hover:cursor-pointer' onClick={() => setShowPass(!showPass)}>
+                                    {
+                                        showPass ? <FaEye /> : <FaEyeSlash />
+                                    }
+                                </span>
+                            </div>
                             {
                                 error && <p className='text-red-500'>{error}</p>
                             }

@@ -1,15 +1,17 @@
 import { useContext, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../services/Firebase Authentication/Authentication';
 import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const { user, LogOut } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const HandleLogout = () => {
         LogOut()
             .then(() => {
                 toast.success("User logged out")
+                navigate('/login')
             })
             .catch((error) => {
                 console.log(error)
@@ -29,6 +31,14 @@ const Navbar = () => {
                         <li>
                             <NavLink to={'/updateProfile'} className={({ isActive }) => isActive ? "text-orange-500" : ""}>Update Profile</NavLink>
                         </li>
+                        {
+                            !user && <li>
+                                <NavLink to={'/register'} className={({ isActive }) => isActive ? "text-orange-500" : ""}>Register</NavLink>
+                            </li>
+                        }
+                        <li>
+                            <NavLink to={'/location'} className={({ isActive }) => isActive ? "text-orange-500" : ""}>Map</NavLink>
+                        </li>
                     </ul>
                 </div>
                 <Link to={'/'} className="Montez btn btn-ghost -ml-6 sm:ml-0 text-base sm:text-lg md:text-xl lg:text-3xl font-bold"><span className='text-green-600'>Farmers</span> Insurance</Link>
@@ -41,8 +51,13 @@ const Navbar = () => {
                     <li>
                         <NavLink to={'/updateProfile'} className={({ isActive }) => isActive ? "text-orange-500" : ""}>Update Profile</NavLink>
                     </li>
+                    {
+                        !user && <li>
+                            <NavLink to={'/register'} className={({ isActive }) => isActive ? "text-orange-500" : ""}>Register</NavLink>
+                        </li>
+                    }
                     <li>
-                        <NavLink to={'/register'} className={({ isActive }) => isActive ? "text-orange-500" : ""}>Register</NavLink>
+                        <NavLink to={'/location'} className={({ isActive }) => isActive ? "text-orange-500" : ""}>Map</NavLink>
                     </li>
                 </ul>
             </div>

@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../services/Firebase Authentication/Authentication';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import toast from 'react-hot-toast';
@@ -7,6 +7,7 @@ import toast from 'react-hot-toast';
 
 const Login = () => {
     const { GooglSignIn, GithubSignIn, user, SignInEmailPassword } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     // Authenticate by Email and Password
     const HandleSubmit = (e) => {
@@ -17,6 +18,7 @@ const Login = () => {
             SignInEmailPassword(Email, Password)
                 .then(() => {
                     toast.success("Successfully logged in")
+                    navigate('/')
                 })
                 .catch(error => {
                     console.log(error)
@@ -34,6 +36,7 @@ const Login = () => {
             GooglSignIn()
                 .then(() => {
                     toast.success("Successfully logged in with Google")
+                    navigate('/')
                 })
                 .catch((error) => {
                     console.log(error)
@@ -51,6 +54,7 @@ const Login = () => {
             GithubSignIn()
                 .then(() => {
                     toast.success("Successfully logged in with Github")
+                    navigate('/')
                 })
                 .catch(error => {
                     console.log(error)

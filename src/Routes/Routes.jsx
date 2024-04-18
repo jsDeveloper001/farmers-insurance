@@ -5,6 +5,8 @@ import Home from "../Pages/Home/Home";
 import Register from "../Pages/Register/Register";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Login from "../Pages/Login/Login";
+import ProtectedRoute from "./ProtectedRoute";
+import Map from "../Pages/Map/Map";
 
 const router = createBrowserRouter([
     {
@@ -18,15 +20,19 @@ const router = createBrowserRouter([
             },
             {
                 path: 'updateProfile',
-                element: <UpdateProfile />
+                element: <ProtectedRoute><UpdateProfile /></ProtectedRoute>
             },
             {
                 path: 'login',
                 element: <Login />
             },
             {
-                path: '/register',
+                path: 'register',
                 element: <Register />
+            },
+            {
+                path: "location",
+                element: <ProtectedRoute><Map /></ProtectedRoute>
             }
         ]
     }
