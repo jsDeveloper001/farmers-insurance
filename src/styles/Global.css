@@ -3,3 +3,22 @@
 .Montez {
     font-family: "Montez", cursive;
 }
+
+.firstSlider{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.292)),url("https://i.ibb.co/PhZ7MyR/agriculture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.secondSlider{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.589), rgba(128, 128, 128, 0.037)),url("https://i.ibb.co/2FJSMCS/Plantation-Land.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.thirdSlider{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.589), rgba(128, 128, 128, 0.037)),url("https://i.ibb.co/z21d242/farm-land.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

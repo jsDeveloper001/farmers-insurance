@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../styles/Global.css'
 import { Helmet } from 'react-helmet-async';
+import Header from '../../components/Header/Header';
 
 const Home = () => {
     return (
@@ -8,6 +9,7 @@ const Home = () => {
             <Helmet>
                 <title>Farmers Insurance</title>
             </Helmet>
+            <Header/>
         </div>
     );
 };
