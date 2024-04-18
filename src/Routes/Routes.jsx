@@ -7,6 +7,7 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Login from "../Pages/Login/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import Map from "../Pages/Map/Map";
+import EstateDetails from "../components/EstateDetails/EstateDetails";
 
 const router = createBrowserRouter([
     {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home />,
-                loader: ()=> fetch('/Estate.json')
+                loader: () => fetch('/Estate.json')
             },
             {
                 path: 'updateProfile',
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
             {
                 path: "location",
                 element: <ProtectedRoute><Map /></ProtectedRoute>
+            },
+            {
+                path: '/estate/:estateId',
+                element: <ProtectedRoute><EstateDetails /></ProtectedRoute>,
+                loader: () => fetch('/Estate.json')
             }
         ]
     }
