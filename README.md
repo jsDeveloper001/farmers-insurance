@@ -1,8 +1,16 @@
-# React + Vite
+# Farmers Insurance
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### My Project Features:
+* Login and logout features with Google, Github and Email-Password
+* Conditional Routes when user logged in or Logged out
+* Update user Information
+* View All Estates in Home Page
+* View Details of a Estate when click on the "View Property" Button
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Used NPM Packages: 
+* swiperjs
+* AOS
+* React Leaflet
+
+Click here for the live site: [Farmers Insurance](https://farmers-insurance.netlify.app/)
