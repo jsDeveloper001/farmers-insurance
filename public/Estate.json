@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "segment_name": "Agricultural Land",
+      "estate_title": "Sprawling Agricultural Land with River Frontage",
+      "image": "agricultural_land.jpg",
+      "description": "Expansive land with river frontage, ideal for farming or development.",
+      "price": "$500,000",
+      "status": "sale",
+      "area": "100 acres",
+      "location": "Rural Valley, California",
+      "facilities": ["Fertile Soil", "River Access", "Farming Infrastructure"]
+    },
+    {
+      "id": 2,
+      "segment_name": "Farms",
+      "estate_title": "Organic Farm with Vineyard and Orchard",
+      "image": "organic_farm.jpg",
+      "description": "Organic farm with vineyard, orchard, and charming farmhouse.",
+      "price": "$1,200,000",
+      "status": "sale",
+      "area": "50 acres",
+      "location": "Green Hills, Oregon",
+      "facilities": ["Farmhouse", "Vineyard", "Orchard", "Barn"]
+    },
+    {
+      "id": 3,
+      "segment_name": "Forests",
+      "estate_title": "Secluded Forest Retreat with Mountain Views",
+      "image": "forest_retreat.jpg",
+      "description": "Secluded forest retreat with mountain views and wildlife.",
+      "price": "$800,000",
+      "status": "sale",
+      "area": "300 acres",
+      "location": "Wilderness Ridge, Montana",
+      "facilities": ["Trails", "Mountain Views", "Wildlife Observation"]
+    },
+    {
+      "id": 4,
+      "segment_name": "Plantations",
+      "estate_title": "Historic Tea Plantation with Colonial Estate",
+      "image": "tea_plantation.jpg",
+      "description": "Historic tea plantation with colonial estate and lush fields.",
+      "price": "$2,500,000",
+      "status": "sale",
+      "area": "150 acres",
+      "location": "Tea Valley, Sri Lanka",
+      "facilities": ["Colonial Estate", "Tea Fields", "Tea Factory"]
+    },
+    {
+      "id": 5,
+      "segment_name": "Agricultural Land",
+      "estate_title": "Prime Farmland with Irrigation System",
+      "image": "farmland.jpg",
+      "description": "Prime farmland with irrigation system, perfect for cultivation.",
+      "price": "$750,000",
+      "status": "sale",
+      "area": "80 acres",
+      "location": "Golden Plains, Kansas",
+      "facilities": ["Irrigation System", "Farmland", "Access Road"]
+    },
+    {
+      "id": 6,
+      "segment_name": "Forests",
+      "estate_title": "Tranquil Forest Haven with Private Lake",
+      "image": "forest_haven.jpg",
+      "description": "Tranquil forest haven with private lake and rustic cabin.",
+      "price": "$900,000",
+      "status": "rent",
+      "area": "200 acres",
+      "location": "Silent Woods, Oregon",
+      "facilities": ["Private Lake", "Cabin Retreat", "Trails"]
+    },
+    {
+      "id": 7,
+      "segment_name": "Farms",
+      "estate_title": "Picturesque Horse Farm with Equestrian Facilities",
+      "image": "horse_farm.jpg",
+      "description": "Picturesque horse farm with pastures and state-of-the-art stable.",
+      "price": "$1,800,000",
+      "status": "rent",
+      "area": "60 acres",
+      "location": "Rolling Meadows, Kentucky",
+      "facilities": ["Pastures", "Stable", "Farmhouse", "Riding Arena"]
+    }
+  ]
+  

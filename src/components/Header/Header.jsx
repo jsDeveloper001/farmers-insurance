@@ -23,7 +23,7 @@ const Header = () => {
             >
                 <SwiperSlide>
                     <div className='mx-auto w-10/12 h-[200px] sm:h-[300px] md:h-[400px] firstSlider flex justify-center items-center'>
-                        <h2 className='text-white font-bold text-3xl'>Agriculture Land</h2>
+                        <h2 className='text-white font-bold text-3xl'>Agricultural Land</h2>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
