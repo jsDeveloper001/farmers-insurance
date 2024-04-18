@@ -7,6 +7,7 @@ const Map = () => {
             <Helmet>
                 <title>Farmers Insurance | Location</title>
             </Helmet>
+            
         </div>
     );
 };
